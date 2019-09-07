@@ -12,6 +12,7 @@ int main(){
     //std::cout << randomIntToGuess << std::endl; //debugging lol
     std::cout << "Guess my number (1 - " << maxRange << ")\n";
 
+    //this checks the input, if it's not an int - it'll throw an "Invaild Input" message
     while(userGuess != randomIntToGuess){
         if(!(std::cin >> userGuess)){
             std::cin.clear();
@@ -21,6 +22,7 @@ int main(){
         std::cout << "Try again!\n";
     }
     std::cout << "\033[2J\033[1;1H You got it right!\n";
+    //GNU/Linux ANSI Esacpe code to clear the screen when the input is correct!
 
     return 0;
 
